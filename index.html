@@ -1,0 +1,509 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="KenaKata — আধুনিক অনলাইন শপ">
+
+  <title>KenaKata — Smart Shopping</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="topbar">
+    🚚 সারাদেশে দ্রুত ডেলিভারি • 💳 Cash on Delivery • 🔒 নিরাপদ শপিং
+  </div>
+
+  <header class="header">
+
+    <a class="logo" href="#">
+      <span>কেনা</span>Kata
+    </a>
+
+    <div class="search-wrap">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="পণ্য খুঁজুন..."
+      >
+
+      <button id="searchBtn">🔍</button>
+    </div>
+
+    <div class="header-actions">
+
+      <button class="icon-btn" title="Wishlist">
+        ♡
+      </button>
+
+      <button
+        class="icon-btn cart-btn"
+        id="cartOpen"
+        title="Cart"
+      >
+        🛒 <b id="cartCount">0</b>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <nav class="nav">
+
+    <div class="container nav-inner">
+
+      <button
+        class="category-btn"
+        id="categoryToggle"
+      >
+        ☰ সব ক্যাটাগরি
+      </button>
+
+      <a href="#home">হোম</a>
+      <a href="#products">শপ</a>
+      <a href="#deals">অফার</a>
+      <a href="#about">আমাদের সম্পর্কে</a>
+      <a href="#contact">যোগাযোগ</a>
+
+    </div>
+
+  </nav>
+
+
+  <main id="home">
+
+    <section class="hero container">
+
+      <div class="hero-copy">
+
+        <span class="pill">
+          NEW COLLECTION 2026
+        </span>
+
+        <h1>
+          আপনার পছন্দের<br>
+          <strong>সবকিছু এক জায়গায়।</strong>
+        </h1>
+
+        <p>
+          বিশ্বস্ত পণ্য, সাশ্রয়ী দাম এবং সহজ অনলাইন শপিং—
+          KenaKata-তে প্রতিদিনের কেনাকাটা হোক আরও স্মার্ট।
+        </p>
+
+        <a
+          class="primary-btn"
+          href="#products"
+        >
+          এখনই শপ করুন →
+        </a>
+
+        <div class="trust-row">
+
+          <span>✓ Quality Products</span>
+          <span>✓ Easy Returns</span>
+          <span>✓ Fast Delivery</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <div class="hero-circle"></div>
+
+        <div class="hero-product">
+          🛍️
+        </div>
+
+        <div class="floating-card one">
+          ⚡ Flash Sale<br>
+          <b>Up to 40% OFF</b>
+        </div>
+
+        <div class="floating-card two">
+          ⭐ 4.9/5<br>
+          <small>Happy Customers</small>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="container categories">
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            SHOP BY CATEGORY
+          </span>
+
+          <h2>
+            জনপ্রিয় ক্যাটাগরি
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <button
+          class="category-card"
+          data-cat="Fashion"
+        >
+          <span>👕</span>
+          <b>Fashion</b>
+          <small>Shop Now</small>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-cat="Electronics"
+        >
+          <span>🎧</span>
+          <b>Electronics</b>
+          <small>Shop Now</small>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-cat="Beauty"
+        >
+          <span>✨</span>
+          <b>Beauty</b>
+          <small>Shop Now</small>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-cat="Home"
+        >
+          <span>🏠</span>
+          <b>Home & Living</b>
+          <small>Shop Now</small>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="deal-banner container"
+      id="deals"
+    >
+
+      <div>
+
+        <span class="eyebrow">
+          LIMITED TIME
+        </span>
+
+        <h2>
+          আজকের Special Deal 🔥
+        </h2>
+
+        <p>
+          নির্বাচিত পণ্যে সর্বোচ্চ 40% পর্যন্ত ছাড়।
+        </p>
+
+      </div>
+
+      <a
+        class="light-btn"
+        href="#products"
+      >
+        Deals দেখুন →
+      </a>
+
+    </section>
+
+
+    <section
+      class="container products-section"
+      id="products"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            OUR COLLECTION
+          </span>
+
+          <h2>
+            জনপ্রিয় পণ্য
+          </h2>
+
+        </div>
+
+
+        <select id="sortSelect">
+
+          <option value="default">
+            Sort: Featured
+          </option>
+
+          <option value="low">
+            Price: Low → High
+          </option>
+
+          <option value="high">
+            Price: High → Low
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div
+        id="productStatus"
+        style="
+          text-align:center;
+          padding:25px;
+          color:#777;
+        "
+      >
+        পণ্য লোড হচ্ছে...
+      </div>
+
+
+      <div
+        id="productGrid"
+        class="product-grid"
+      ></div>
+
+    </section>
+
+
+    <section class="features container">
+
+      <div>
+        <span>🚚</span>
+
+        <div>
+          <b>দ্রুত ডেলিভারি</b>
+          <small>
+            সারাদেশে নির্ভরযোগ্য ডেলিভারি
+          </small>
+        </div>
+      </div>
+
+
+      <div>
+        <span>🔐</span>
+
+        <div>
+          <b>নিরাপদ পেমেন্ট</b>
+          <small>
+            আপনার তথ্য সুরক্ষিত
+          </small>
+        </div>
+      </div>
+
+
+      <div>
+        <span>↩️</span>
+
+        <div>
+          <b>সহজ রিটার্ন</b>
+          <small>
+            সহজে রিটার্ন ও এক্সচেঞ্জ
+          </small>
+        </div>
+      </div>
+
+
+      <div>
+        <span>💬</span>
+
+        <div>
+          <b>সাপোর্ট</b>
+          <small>
+            প্রয়োজনে আমাদের সাথে কথা বলুন
+          </small>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="newsletter container">
+
+      <div>
+
+        <span class="eyebrow">
+          STAY UPDATED
+        </span>
+
+        <h2>
+          নতুন অফার আগে পেতে সাবস্ক্রাইব করুন
+        </h2>
+
+      </div>
+
+
+      <form id="newsletter">
+
+        <input
+          type="email"
+          placeholder="আপনার ইমেইল"
+          required
+        >
+
+        <button class="primary-btn">
+          Subscribe
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <footer id="contact">
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <a
+          class="logo footer-logo"
+          href="#"
+        >
+          <span>কেনা</span>Kata
+        </a>
+
+        <p>
+          স্মার্ট ও সহজ অনলাইন শপিংয়ের জন্য
+          আপনার বিশ্বস্ত ঠিকানা।
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Quick Links</h4>
+
+        <a href="#products">Shop</a>
+        <a href="#deals">Offers</a>
+        <a href="#about">About</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Customer Care</h4>
+
+        <a href="#">Shipping Policy</a>
+        <a href="#">Return Policy</a>
+        <a href="#">Privacy Policy</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Contact</h4>
+
+        <p>📞 +880 1XXX-XXXXXX</p>
+        <p>✉️ support@kenakata.com</p>
+        <p>📍 Bangladesh</p>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 KenaKata. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <div
+    class="overlay"
+    id="overlay"
+  ></div>
+
+
+  <aside
+    class="cart-panel"
+    id="cartPanel"
+  >
+
+    <div class="cart-head">
+
+      <h2>
+        Your Cart
+      </h2>
+
+      <button id="cartClose">
+        ✕
+      </button>
+
+    </div>
+
+
+    <div id="cartItems"></div>
+
+
+    <div class="cart-footer">
+
+      <div>
+
+        <span>
+          Subtotal
+        </span>
+
+        <b id="cartTotal">
+          ৳0
+        </b>
+
+      </div>
+
+      <button
+        class="primary-btn checkout"
+        id="checkout"
+      >
+        Checkout →
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Your Supabase configuration -->
+  <script src="supabase.js"></script>
+
+  <!-- Main application -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+```
