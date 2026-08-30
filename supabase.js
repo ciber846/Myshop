@@ -1,0 +1,11 @@
+const SUPABASE_URL =
+  "https://vylesixmipqtzywnotia.supabase.co";
+
+const SUPABASE_KEY =
+  "YOUR_NEW_PUBLISHABLE_KEY";
+
+const supabaseClient =
+  window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
